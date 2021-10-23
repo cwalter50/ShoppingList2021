@@ -7,13 +7,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource
+{
 
-    override func viewDidLoad() {
+    // MARK: Outlets and Variables
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var myTextField: UITextField!
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        
     }
 
-
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        print(indexPath)
+        cell.textLabel?.text = "Hello"
+        
+        return cell
+    }
+    
+    
+    @IBAction func whenButtonPressed(_ sender: UIBarButtonItem)
+    {
+       
+        
+        
+    }
+    
 }
 

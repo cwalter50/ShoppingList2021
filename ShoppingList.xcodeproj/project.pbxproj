@@ -14,6 +14,7 @@
 		3831D3162724745700824FAF /* ShoppingList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3831D3142724745700824FAF /* ShoppingList.xcdatamodeld */; };
 		3831D3182724745800824FAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3831D3172724745800824FAF /* Assets.xcassets */; };
 		3831D31B2724745800824FAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3831D3192724745800824FAF /* LaunchScreen.storyboard */; };
+		3831D3232724820700824FAF /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3831D3222724820700824FAF /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		3831D3172724745800824FAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3831D31A2724745800824FAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3831D31C2724745800824FAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3831D3222724820700824FAF /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3831D3192724745800824FAF /* LaunchScreen.storyboard */,
 				3831D31C2724745800824FAF /* Info.plist */,
 				3831D3142724745700824FAF /* ShoppingList.xcdatamodeld */,
+				3831D3222724820700824FAF /* Item.swift */,
 			);
 			path = ShoppingList;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3831D3232724820700824FAF /* Item.swift in Sources */,
 				3831D3102724745700824FAF /* ViewController.swift in Sources */,
 				3831D3162724745700824FAF /* ShoppingList.xcdatamodeld in Sources */,
 				3831D30C2724745700824FAF /* AppDelegate.swift in Sources */,
