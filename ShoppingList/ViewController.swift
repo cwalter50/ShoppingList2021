@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource
     
     @IBOutlet weak var myTextField: UITextField!
     
+    var items:[Item] = []
     
     override func viewDidLoad()
     {
@@ -22,16 +23,22 @@ class ViewController: UIViewController, UITableViewDataSource
         
         tableView.dataSource = self
         
+        let item1 = Item(theName: "milk")
+        let item2 = Item(theName: "eggs")
+        let item3 = Item(theName: "bacon")
+        
+        items = [item1, item2]
+        items.append(item3)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         print(indexPath)
-        cell.textLabel?.text = "Hello"
+        cell.textLabel?.text = items[indexPath.row].name
         
         return cell
     }
@@ -39,7 +46,12 @@ class ViewController: UIViewController, UITableViewDataSource
     
     @IBAction func whenButtonPressed(_ sender: UIBarButtonItem)
     {
-       
+        if let newItemName = myTextField.text
+        {
+            let newItem = Item(theName: newItemName)
+            items.append(newItem)
+            tableView.reloadData()
+        }
         
         
     }
